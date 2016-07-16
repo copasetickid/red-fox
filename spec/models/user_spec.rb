@@ -9,4 +9,8 @@ RSpec.describe User, type: :model do
       expect(new_user.access_token).not_to be_nil
     end
   end
+
+  describe "associations" do
+    it { should have_many(:stores) }
+  end
 end

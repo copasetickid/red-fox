@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   after_create :set_access_token
 
+  has_many :stores
+
 
   private
 
