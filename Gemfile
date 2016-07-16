@@ -8,10 +8,11 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'devise', '~> 4.0'
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -20,8 +21,14 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'rack-cors'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'rspec-rails', '~> 3.5.0'
+  gem 'capybara', '~> 2.6'
+  gem "factory_girl_rails", "~> 4.6"
+  gem 'database_cleaner', '~> 1.5'
+  gem 'selenium-webdriver', "~> 2.45"
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'faker'
 end
 
 group :development do
