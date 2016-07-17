@@ -9,6 +9,8 @@ RSpec.describe "User API", :type => :request do
 
     json = JSON.parse(response.body)
 
+    expect(response.content_type).to eq "application/vnd.api+json"
+
     expect(response.status).to eq 200
     expect(json['data'].length).to eq 1
 
@@ -24,5 +26,15 @@ RSpec.describe "User API", :type => :request do
 
     expect(json['data']['id']).to  eq user.id.to_s
     expect(json['data']['attributes']['email']).to eq user.email
+  end
+
+  it "returns an JSON:API error when the requesting user data with invalid" do
+    get user_path(id: "5")
+
+    json = JSON.parse(response.body)
+
+    expect(response.status).to eq 404
+    expect(json['errors']).to eq "Wrong ID provided"
+
   end
 end
