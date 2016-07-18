@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :stores
+  resources :stores do
+    resources :stock_items, path: "stock-items", controller: "store_stock_items"
+  end
+
+  resources :stock_items, path: "stock-items"
 end
