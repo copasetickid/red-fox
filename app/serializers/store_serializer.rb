@@ -1,5 +1,9 @@
 class StoreSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :created_at
 
   belongs_to :user
+
+  has_many :stock_items
+
+  link(:self) { store_url(object) }
 end
