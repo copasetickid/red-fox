@@ -4,6 +4,4 @@ class StoreSerializer < ActiveModel::Serializer
   belongs_to :user
 
   has_many :stock_items
-
-  link(:self) { store_url(object) }
 end
