@@ -1,24 +1,8 @@
-# README
+### Project Red Fox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An web API for tracking the store inventory 
 
-Things you may want to cover:
+### Dependencies
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rails 5
+* Postgres
