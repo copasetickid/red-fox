@@ -8,4 +8,11 @@ Rails.application.routes.draw do
   end
 
   resources :stock_items, path: "stock-items"
+
+  namespace :api do
+    namespace :v1 do
+      resources :stores, only: [:index, :show] do
+      end
+    end
+  end
 end
