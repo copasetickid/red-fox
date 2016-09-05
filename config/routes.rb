@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :stores, only: [:index, :show, :create]
       resources :stock_items, path: "stock-items"
+      resources :users, only: [:index]
     end
   end
 end
