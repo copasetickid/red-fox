@@ -2,7 +2,7 @@ class StoreStockItemsController < ApplicationController
   before_action :store_lookup
 
   def create
-    @stock_item = @store.stock_item.new
+    @stock_item = @store.stock_items.new
 
     @stock_item.attributes = stock_item_params
 
